@@ -92,6 +92,8 @@ modules:
     build-commands:
       - install -Dm755 run.sh /app/bin/run.sh
 
+      - python -m compileall .
+
       - desktop-file-edit --remove-key="Exec" --remove-key="Version" --remove-key="Icon" flowkeeper/installer/flowkeeper.desktop
       - desktop-file-edit --set-key="Exec" --set-value="run.sh" flowkeeper/installer/flowkeeper.desktop
       - install -Dm644 flowkeeper/installer/flowkeeper.desktop ${FLATPAK_DEST}/share/applications/flowkeeper.desktop
