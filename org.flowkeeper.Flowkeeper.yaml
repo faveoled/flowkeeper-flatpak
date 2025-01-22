@@ -94,7 +94,6 @@ modules:
 
       - desktop-file-edit --remove-key="Exec" --remove-key="Version" --remove-key="Icon" flowkeeper/installer/flowkeeper.desktop
       - desktop-file-edit --set-key="Exec" --set-value="run.sh" flowkeeper/installer/flowkeeper.desktop
-      - desktop-file-edit --remove-key="Icon" flowkeeper/installer/flowkeeper.desktop
       - install -Dm644 flowkeeper/installer/flowkeeper.desktop ${FLATPAK_DEST}/share/applications/flowkeeper.desktop
       - install -Dm644 flowkeeper/res/flowkeeper.png /app/share/icons/hicolor/512x512/apps/org.flowkeeper.Flowkeeper.png
 
